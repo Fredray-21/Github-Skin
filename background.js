@@ -26,8 +26,8 @@ window.addEventListener('load', function () {
             form_customize.addEventListener('submit', function (e) {
                 e.preventDefault();
                 const skin = document.querySelector('#select-skin').value;
-                LS.setItem('skin', "modeles/" + skin + ".css");
-                window.location.reload();
+                LS.setItem('skin',skin);
+                changeStyle(skin);
             });
         } else {
             div_customize.style.display = 'block';
@@ -37,16 +37,17 @@ window.addEventListener('load', function () {
 
 
     LS.getItem('skin').then(skin => {
-        if (skin) {
-            const link = document.createElement("link");
-            link.href = chrome.runtime.getURL(skin);
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            link.media = "screen,print";
-            document.head.appendChild(link);
-        }
+        skin && changeStyle(skin);
     });
     console.log(LS.getItem('skin'));
 });
 
 
+function changeStyle(skin) {
+    let root = document.documentElement;
+    if (skin == "purple") {
+        root.style.setProperty('--color-accent-fg', '#c460f1');
+    } else if (skin == "yellow") {
+        root.style.setProperty('--color-accent-fg', '#FFD700');
+    }
+}

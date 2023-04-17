@@ -1,19 +1,28 @@
-:root {
-    --color-accent-fg                : #c460f1 !important;
-    --color-calendar-graph-day-L1-bg : #4e2c51 !important;
-    --color-calendar-graph-day-L2-bg : #7d3c98 !important;
-    --color-calendar-graph-day-L3-bg : #a74aa8 !important;
-    --color-calendar-graph-day-L4-bg : #d660a8 !important;
-
-    --color-accent-emphasis          : #a7414a !important;
-    --color-btn-bg                   : #4e2c51 !important;
-    --color-btn-hover-bg             : #7d3c98 !important;
-
-    --color-accent-subtle            : rgba(128, 57, 123, 0.1) !important;
-    --color-btn-text                 : #e7e7e7 !important;
+.btn-customize {
+    color: yellow !important;
+    cursor: pointer !important;
 }
 
-/* class for research */
-.bZALwe {
-    color: #c460f1 !important;
+
+#div-customize {
+    position: fixed;
+    top: 64px;
+    right: 0;
+    /* transform: translate(-50%, -50%); */
+    width: 30em;
+    height: 30em;
+    background-color: red;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 5;
+}
+
+#close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }

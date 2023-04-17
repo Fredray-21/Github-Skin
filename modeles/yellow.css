@@ -1,0 +1,19 @@
+:root {
+    --color-accent-fg: #FFD700 !important;
+    --color-calendar-graph-day-L1-bg: #FFD700 !important;
+    --color-calendar-graph-day-L2-bg: #E6B800 !important;
+    --color-calendar-graph-day-L3-bg: #CCA300 !important;
+    --color-calendar-graph-day-L4-bg: #B38F00 !important;
+
+    --color-accent-emphasis: #A67C00 !important;
+    --color-btn-bg: #FFD700 !important;
+    --color-btn-hover-bg: #E6B800 !important;
+
+    --color-accent-subtle: rgba(255, 215, 0, 0.1) !important;
+    --color-btn-text: #333 !important;
+}
+
+/* class for research */
+.bZALwe {
+    color: #FFD700 !important;
+}

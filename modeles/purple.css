@@ -1,0 +1,19 @@
+:root {
+    --color-accent-fg: #c460f1 !important;
+    --color-calendar-graph-day-L1-bg: #4e2c51 !important;
+    --color-calendar-graph-day-L2-bg: #7d3c98 !important;
+    --color-calendar-graph-day-L3-bg: #a74aa8 !important;
+    --color-calendar-graph-day-L4-bg: #d660a8 !important;
+
+    --color-accent-emphasis: #a7414a !important;
+    --color-btn-bg: #4e2c51 !important;
+    --color-btn-hover-bg: #7d3c98 !important;
+
+    --color-accent-subtle: rgba(128, 57, 123, 0.1) !important;
+    --color-btn-text: #e7e7e7 !important;
+}
+
+/* class for research */
+.bZALwe {
+    color: #c460f1 !important;
+}

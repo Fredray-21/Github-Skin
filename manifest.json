@@ -10,11 +10,26 @@
       ],
       "css": [
         "style.css"
+      ],
+      "js": [
+        "background.js"
       ]
     }
   ],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "popup.js",
+        "modeles/*"
+      ],
+      "matches": [
+        "https://github.com/*"
+      ]
+    }
   ]
 }
-

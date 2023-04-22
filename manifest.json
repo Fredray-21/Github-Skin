@@ -25,7 +25,8 @@
       "resources": [
         "popup.html",
         "popup.js",
-        "modeles/*"
+        "modeles/*",
+        "assets/*"
       ],
       "matches": [
         "https://github.com/*"

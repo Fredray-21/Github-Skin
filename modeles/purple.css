@@ -11,9 +11,19 @@
 
     --color-accent-subtle: rgba(128, 57, 123, 0.1) !important;
     --color-btn-text: #e7e7e7 !important;
+
 }
 
-/* class for research */
-.bZALwe {
-    color: #c460f1 !important;
+/* class for star icon */
+.starred .starred-button-icon,
+.btn .octicon {
+    color: #000000 !important;
+}
+
+.btn.selected {
+    background-color:var(--color-accent-emphasis);
+}
+
+.pricing-recommended-plan {
+    background-image: radial-gradient(circle, var(--color-accent-fg) 0%, var(--color-accent-fg) 48%, var(--color-calendar-graph-day-L1-bg) 85%, var(--color-calendar-graph-day-L1-bg) 98%) !important;
 }

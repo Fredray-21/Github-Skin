@@ -1,19 +1,28 @@
 :root {
-    --color-accent-fg: #FFD700 !important;
-    --color-calendar-graph-day-L1-bg: #FFD700 !important;
-    --color-calendar-graph-day-L2-bg: #E6B800 !important;
-    --color-calendar-graph-day-L3-bg: #CCA300 !important;
-    --color-calendar-graph-day-L4-bg: #B38F00 !important;
+    --color-accent-fg: #FFD500 !important;
+    --color-calendar-graph-day-L1-bg: #FFA500 !important;
+    --color-calendar-graph-day-L2-bg: #FF7F00 !important;
+    --color-calendar-graph-day-L3-bg: #FF5500 !important;
+    --color-calendar-graph-day-L4-bg: #FF3300 !important;
 
-    --color-accent-emphasis: #A67C00 !important;
+    --color-accent-emphasis: #FFA500 !important;
     --color-btn-bg: #FFD700 !important;
-    --color-btn-hover-bg: #E6B800 !important;
+    --color-btn-hover-bg: #FFA500 !important;
+    --color-btn-hover-border: #FFA500 !important;
 
     --color-accent-subtle: rgba(255, 215, 0, 0.1) !important;
-    --color-btn-text: #333 !important;
+    --color-btn-text: #000000 !important;
 }
 
-/* class for research */
-.bZALwe {
-    color: #FFD700 !important;
+/* class for star icon */
+.starred .starred-button-icon,
+.btn .octicon {
+    color: #000000 !important;
+}
+.btn.selected {
+    background-color: var(--color-accent-emphasis);
+}
+
+.pricing-recommended-plan {
+    background-image: radial-gradient(circle, var(--color-accent-fg) 0%, var(--color-accent-fg) 48%, var(--color-calendar-graph-day-L1-bg) 85%, var(--color-calendar-graph-day-L1-bg) 98%) !important;
 }

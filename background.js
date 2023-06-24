@@ -55,13 +55,19 @@ const createTooltip = () => {
 }
 
 const changeStyle = (skin) => {
-    let root = document.documentElement;
     if (skin == "purple") {
-        root.style.setProperty('--color-accent-fg', '#c460f1');
+        let linkTag = document.createElement('link');
+        linkTag.rel = 'stylesheet';
+        linkTag.href = chrome.runtime.getURL('modeles/purple.css'); // Chemin local vers votre fichier CSS principal
+        document.head.appendChild(linkTag);
     } else if (skin == "yellow") {
-        root.style.setProperty('--color-accent-fg', '#FFD700');
+        let linkTag = document.createElement('link');
+        linkTag.rel = 'stylesheet';
+        linkTag.href = chrome.runtime.getURL('modeles/yellow.css'); // Chemin local vers votre fichier CSS pour le thème jaune
+        document.head.appendChild(linkTag);
     }
 }
+
 
 const button = createButton();
 const icon = createIcon();

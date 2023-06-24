@@ -16,11 +16,20 @@ This extension is in constant evolution according to the various problems of sty
 6. Click on the extension icon to enable/disable the extension
 8. Enjoy!
 
+
 ## How to use
-1. Open a new tab and go to Google
-2. Type in your search query
-3. The extension will automatically remove the Ad results from the search results
-4. Enjoy!
+1. Open a new GitHub page.
+2. Click on the "Personalize" logo in the GitHub navigation bar.
+3. Customize your GitHub skin using the provided options.
+4. The changes will be applied in real-time.
+5. Explore GitHub with your newly customized skin.
+6. To revert back to the default GitHub style, click the "Reset" button in the customization panel.
+7. To disable the extension, click on the extension icon in the browser toolbar.
+8. To re-enable the extension, click on the extension icon again.
+9. Provide feedback or report issues on the extension's GitHub repository.
+10. Enjoy the enhanced visual experience while browsing GitHub with your personalized skin
+
+
 
 ## How to uninstall
 1. Open Chrome and go to `chrome://extensions/`

@@ -10,26 +10,17 @@ LS.getItem('skin').then(skin => {
 });
 
 const changeStyle = (skin) => {
-    let linkTag = document.createElement('link');
-    linkTag.rel = 'stylesheet';
-    linkTag.type = 'text/css';
-    linkTag.id = 'skin';
-    let isDefault = false;
-    switch (skin) {
-        case "purple":
-            linkTag.href = chrome.runtime.getURL('modeles/purple.css');
-            break;
-        case "yellow":
-            linkTag.href = chrome.runtime.getURL('modeles/yellow.css');
-            break;
-        case "red":
-            linkTag.href = chrome.runtime.getURL('modeles/red.css');
-            break;
-        default:
-            isDefault = true;
-            break;
+    const linkTagOld = document.querySelector('#skin');
+    if(linkTagOld) {
+        linkTagOld.href = chrome.runtime.getURL(`modeles/${skin}.css`);
+    } else {
+        const linkTag = document.createElement('link');
+        linkTag.rel = 'stylesheet';
+        linkTag.type = 'text/css';
+        linkTag.id = 'skin';
+        linkTag.href = chrome.runtime.getURL(`modeles/${skin}.css`);
+        document.head.appendChild(linkTag);
     }
-    isDefault ? null : document.head.appendChild(linkTag);
 }
 
 const header = document.querySelector('header');

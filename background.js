@@ -1,13 +1,36 @@
 const LS = {
     getAllItems: () => chrome.storage.local.get(),
     getItem: async key => (await chrome.storage.local.get(key))[key],
-    setItem: (key, val) => chrome.storage.local.set({ [key]: val }),
-    removeItems: keys => chrome.storage.local.remove(keys),
+    setItem: (key, val) => chrome.storage.local.set({[key]: val}),
+    removeItem: keys => chrome.storage.local.remove(keys),
 };
 
 LS.getItem('skin').then(skin => {
     skin && changeStyle(skin);
 });
+
+const changeStyle = (skin) => {
+    let linkTag = document.createElement('link');
+    linkTag.rel = 'stylesheet';
+    linkTag.type = 'text/css';
+    linkTag.id = 'skin';
+    let isDefault = false;
+    switch (skin) {
+        case "purple":
+            linkTag.href = chrome.runtime.getURL('modeles/purple.css');
+            break;
+        case "yellow":
+            linkTag.href = chrome.runtime.getURL('modeles/yellow.css');
+            break;
+        case "red":
+            linkTag.href = chrome.runtime.getURL('modeles/red.css');
+            break;
+        default:
+            isDefault = true;
+            break;
+    }
+    isDefault ? null : document.head.appendChild(linkTag);
+}
 
 const header = document.querySelector('header');
 const globalBar = header.querySelector('.AppHeader-globalBar.js-global-bar');
@@ -54,33 +77,11 @@ const createTooltip = () => {
     return tooltip;
 }
 
-const changeStyle = (skin) => {
-    let linkTag = document.createElement('link');
-    linkTag.rel = 'stylesheet';
-    switch (skin) {
-        case "purple":
-            linkTag.href = chrome.runtime.getURL('modeles/purple.css');
-            break;
-        case "yellow":
-            linkTag.href = chrome.runtime.getURL('modeles/yellow.css');
-            break;
-        case "red":
-            linkTag.href = chrome.runtime.getURL('modeles/red.css');
-            break;
-        default:
-            linkTag.href = chrome.runtime.getURL('modeles/default.css');
-            break;
-    }
-    document.head.appendChild(linkTag);
-}
-
-
 const button = createButton();
 const icon = createIcon();
 const tooltip = createTooltip();
 button.appendChild(icon);
 button.appendChild(tooltip);
-
 
 
 button.addEventListener('click', async function () {
@@ -93,18 +94,32 @@ button.addEventListener('click', async function () {
         script.src = chrome.runtime.getURL('popup.js');
         document.body.appendChild(script);
 
+
+        //event submit du formulaire de personnalisation
         const form_customize = document.querySelector('#form-customize');
-        form_customize.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const skin = document.querySelector('#select-skin').value;
-            LS.setItem('skin', skin);
-            changeStyle(skin);
-        });
+        if (form_customize) {
+            form_customize.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const skin = document.querySelector('#select-skin').value;
+                LS.setItem('skin', skin);
+                changeStyle(skin);
+            });
+        }
+
+        //event click du bouton reset style
+        const btnReset = document.querySelector('#reset-btn');
+        if (btnReset) {
+            btnReset.addEventListener('click', function () {
+                LS.removeItem('skin');
+                const linkTag = document.querySelector('#skin');
+                linkTag && linkTag.remove();
+            });
+        }
+
+
     } else {
         div_customize.style.display = 'block';
     }
 });
 
 globalBarEnd.insertBefore(button, AppHeaderUser);
-
-

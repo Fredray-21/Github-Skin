@@ -55,17 +55,23 @@ const createTooltip = () => {
 }
 
 const changeStyle = (skin) => {
-    if (skin == "purple") {
-        let linkTag = document.createElement('link');
-        linkTag.rel = 'stylesheet';
-        linkTag.href = chrome.runtime.getURL('modeles/purple.css'); // Chemin local vers votre fichier CSS principal
-        document.head.appendChild(linkTag);
-    } else if (skin == "yellow") {
-        let linkTag = document.createElement('link');
-        linkTag.rel = 'stylesheet';
-        linkTag.href = chrome.runtime.getURL('modeles/yellow.css'); // Chemin local vers votre fichier CSS pour le thème jaune
-        document.head.appendChild(linkTag);
+    let linkTag = document.createElement('link');
+    linkTag.rel = 'stylesheet';
+    switch (skin) {
+        case "purple":
+            linkTag.href = chrome.runtime.getURL('modeles/purple.css');
+            break;
+        case "yellow":
+            linkTag.href = chrome.runtime.getURL('modeles/yellow.css');
+            break;
+        case "red":
+            linkTag.href = chrome.runtime.getURL('modeles/red.css');
+            break;
+        default:
+            linkTag.href = chrome.runtime.getURL('modeles/default.css');
+            break;
     }
+    document.head.appendChild(linkTag);
 }
 
 

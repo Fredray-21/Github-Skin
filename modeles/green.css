@@ -1,0 +1,28 @@
+:root {
+    --color-accent-fg: #00ff00 !important;
+    --color-calendar-graph-day-L1-bg: #005d00 !important;
+    --color-calendar-graph-day-L2-bg: #00a800 !important;
+    --color-calendar-graph-day-L3-bg: #00f300 !important;
+    --color-calendar-graph-day-L4-bg: #00ff00 !important;
+
+    --color-accent-emphasis: #4aa74a !important;
+    --color-btn-bg: #005d00 !important;
+    --color-btn-hover-bg: #00a800 !important;
+
+    --color-accent-subtle: rgba(0, 128, 0, 0.1) !important;
+    --color-btn-text: #e7e7e7 !important;
+}
+
+/* class for star icon */
+.starred .starred-button-icon,
+.btn .octicon {
+    color: #000000 !important;
+}
+
+.btn.selected {
+    background-color: var(--color-accent-emphasis);
+}
+
+.pricing-recommended-plan {
+    background-image: radial-gradient(circle, var(--color-accent-fg) 0%, var(--color-accent-fg) 48%, var(--color-calendar-graph-day-L1-bg) 85%, var(--color-calendar-graph-day-L1-bg) 98%) !important;
+}

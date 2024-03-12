@@ -5,7 +5,7 @@
 This extension is in constant evolution according to the various problems of style which I meet
 
 ## Preview
-![Preview](https://cdn.discordapp.com/attachments/523901548779012107/1095825313646248049/image.png)
+![Preview](https://raw.githubusercontent.com/Fredray-21/Github-Skin/main/assets/illu.webp) 
 
 ## How to install
 1. Clone this repository to your local machine

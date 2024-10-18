@@ -1,11 +1,11 @@
 :root {
-    --color-accent-fg: #FFD500 !important;
+    --fgColor-accent: #FFD500 !important;
     --color-calendar-graph-day-L1-bg: #FFA500 !important;
     --color-calendar-graph-day-L2-bg: #FF7F00 !important;
     --color-calendar-graph-day-L3-bg: #FF5500 !important;
     --color-calendar-graph-day-L4-bg: #FF3300 !important;
 
-    --color-accent-emphasis: #FFA500 !important;
+    --bgColor-accent-emphasis: #FFA500 !important;
     --color-btn-bg: #FFD700 !important;
     --color-btn-hover-bg: #FFA500 !important;
     --color-btn-hover-border: #FFA500 !important;
@@ -20,9 +20,9 @@
     color: #000000 !important;
 }
 .btn.selected {
-    background-color: var(--color-accent-emphasis);
+    background-color: var(--bgColor-accent-emphasis);
 }
 
 .pricing-recommended-plan {
-    background-image: radial-gradient(circle, var(--color-accent-fg) 0%, var(--color-accent-fg) 48%, var(--color-calendar-graph-day-L1-bg) 85%, var(--color-calendar-graph-day-L1-bg) 98%) !important;
+    background-image: radial-gradient(circle, var(--fgColor-accent) 0%, var(--fgColor-accent) 48%, var(--color-calendar-graph-day-L1-bg) 85%, var(--color-calendar-graph-day-L1-bg) 98%) !important;
 }
